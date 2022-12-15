@@ -1,1 +1,103 @@
-<p>home works!</p>
+div class="container">
+    <div class="row">
+        <div class="col-12 title-spacing">
+            <h1>Escolha Uma Medida Para Converter</h1>
+        </div>
+        <div class="col-12 list-container">
+          <div class="row">
+            <div class="col-12">
+              <h2 class="title-spacing">Conversor de Temperatura</h2>
+            </div>
+            <form [formGroup]="convertTempForm" (ngSubmit)="onConvertTemperature()">
+            <div class="col-12">
+              <mat-form-field class="btn-margin" appearance="fill">
+                <mat-label>Converter de: </mat-label>
+                <mat-select formControlName="convertFromTemp" [(value)]="convertTempForm.value.convertFromTemp">
+                    <mat-option *ngFor="let temperature of temperatures" [value]="temperature" [disabled]="temperature == convertTempForm.value.convertToTemp">
+                      {{temperature}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+            <mat-form-field class="btn-margin" appearance="fill">
+                <mat-label>Converter para: </mat-label>
+                <mat-select formControlName="convertToTemp" [(value)]="convertTempForm.value.convertToTemp">
+                    <mat-option *ngFor="let temperature of temperatures" [value]="temperature" [disabled]="temperature == convertTempForm.value.convertFromTemp">
+                      {{temperature}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+            </div>
+            <div class="col-12">
+              <button mat-raised-button color="primary" type="submit" [disabled]="!convertTempForm.valid">
+                Converter Temperatura
+              </button>
+            </div>
+            </form>
+          </div>
+        </div>
+        <div class="col-12 list-container">
+          <div class="row">
+            <div class="col-12">
+              <h2 class="title-spacing">Conversor de Peso</h2>
+            </div>
+            <form [formGroup]="convertWeightForm" (ngSubmit)="onConvertWeight()">
+            <div class="col-12">
+              <mat-form-field class="btn-margin" appearance="fill">
+                <mat-label>Converter de: </mat-label>
+                <mat-select formControlName="convertFromWeight" [(value)]="convertWeightForm.value.convertFromWeight">
+                    <mat-option *ngFor="let weight of weights" [value]="weight" [disabled]="weight == convertWeightForm.value.convertToWeight">
+                      {{weight}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+            <mat-form-field class="btn-margin" appearance="fill">
+                <mat-label>Converter para: </mat-label>
+                <mat-select formControlName="convertToWeight" [(value)]="convertWeightForm.value.convertToWeight">
+                    <mat-option *ngFor="let weight of weights" [value]="weight" [disabled]="weight == convertWeightForm.value.convertFromWeight">
+                      {{weight}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+            </div>
+            <div class="col-12">
+              <button mat-raised-button color="primary" type="submit" [disabled]="!convertWeightForm.valid">
+                Converter Peso
+              </button>
+            </div>
+            </form>
+          </div>
+        </div>
+        <div class="col-12 list-container">
+          <div class="row">
+            <div class="col-12">
+              <h2 class="title-spacing">Conversor de Medida</h2>
+            </div>
+            <form [formGroup]="convertMeasureForm" (ngSubmit)="onConvertMeasure()">
+              <div class="col-12">
+                <mat-form-field class="btn-margin" appearance="fill">
+                  <mat-label>Converter de: </mat-label>
+                  <mat-select formControlName="convertFromMeasure" [(value)]="convertMeasureForm.value.convertFromMeasure">
+                      <mat-option *ngFor="let measure of measures" [value]="measure" [disabled]="measure == convertMeasureForm.value.convertToMeasure">
+                        {{measure}}
+                      </mat-option>
+                  </mat-select>
+                </mat-form-field>
+                <mat-form-field class="btn-margin" appearance="fill">
+                  <mat-label>Converter para: </mat-label>
+                  <mat-select formControlName="convertToMeasure" [(value)]="convertMeasureForm.value.convertToMeasure">
+                      <mat-option *ngFor="let measure of measures" [value]="measure" [disabled]="measure == convertMeasureForm.value.convertFromMeasure">
+                        {{measure}}
+                      </mat-option>
+                  </mat-select>
+                </mat-form-field>
+              </div>
+              <div class="col-12">
+                <button mat-raised-button color="primary" type="submit" [disabled]="!convertMeasureForm.valid">
+                  Converter Medida
+                </button>
+              </div>
+          </form>
+          </div>
+        </div>
+    </div>
+</div>
