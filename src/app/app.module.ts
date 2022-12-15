@@ -7,6 +7,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomeComponent } from './home/home.component';
 import { CalculatorPageComponent } from './calculator-page/calculator-page.component';
 import { CalculatorComponent } from './calculator-page/calculator/calculator.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { AngularMaterialModule } from './angular-material/angular-material.module';
 
 @NgModule({
   declarations: [
@@ -15,7 +17,7 @@ import { CalculatorComponent } from './calculator-page/calculator/calculator.com
     CalculatorPageComponent,
     CalculatorComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, BrowserAnimationsModule],
+  imports: [BrowserModule, AppRoutingModule, BrowserAnimationsModule, ReactiveFormsModule, AngularMaterialModule],
   providers: [],
   bootstrap: [AppComponent],
 })
