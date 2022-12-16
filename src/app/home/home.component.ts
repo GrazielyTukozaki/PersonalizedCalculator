@@ -38,7 +38,7 @@ export class HomeComponent implements OnInit {
     this.measures.sort();
   }
 
-  onConvertTemp(){
+  onConvertTemperature(){
     // Get the value of the selected temperature and send it as a parameter to the route
     this.router.navigate(['/calculadora',
     this.convertTempForm.value.convertFromTemp,
