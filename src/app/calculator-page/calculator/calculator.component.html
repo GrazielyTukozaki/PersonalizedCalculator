@@ -1,1 +1,11 @@
-<p>calculator works!</p>
+<div class="bg-color">
+  <h3>A Medida a Ser Convertida: {{measure}}</h3>
+  <form [formGroup]="formMeasure">
+    <mat-form-field appearance="fill" color="primary">
+        <input matInput formControlName="inputMeasure" [value]="resultConv.value">
+    </mat-form-field>
+    {{measure}}
+    <br>
+    <button mat-raised-button color="primary" (click)="onResultConversion(inputValue)">Converter</button>
+  </form>
+</div>
