@@ -1,1 +1,20 @@
-<p>calculator-page works!</p>
+<div class="container">
+  <div class="row">
+      <div class="col-12 title-spacing">
+          <h1>Você está vendo a conversão de {{result1.type}} e {{result2.type}}</h1>
+      </div>
+
+      <div class="col-6">
+          <app-calculator [resultConv]="result1" (resultConvChange)="convertedValue($event)"></app-calculator>
+      </div>
+
+      <div class="col-6">
+          <app-calculator [resultConv]="result2" (resultConvChange)="convertedValue($event)"></app-calculator>
+      </div>
+
+      <div class="col-12">
+          <button mat-raised-button color="primary" routerLink="/">Voltar</button>
+      </div>
+  </div>
+
+</div>
