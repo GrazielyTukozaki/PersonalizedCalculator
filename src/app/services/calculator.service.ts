@@ -9,7 +9,7 @@ export class CalculatorService {
 
   convertValues(measureInput: number, convertMeasureFrom: string, convertMeasureTo: string):number|null {
 
-    //Temperatura
+    //Temperature
     if(convertMeasureFrom == 'Celsius' && convertMeasureTo == 'Kelvin'){
       let result: number;
       result = measureInput + 273.15;
@@ -43,7 +43,7 @@ export class CalculatorService {
       return (result);
     }
 
-    //Peso
+    //Weight
     if(convertMeasureFrom == 'Grama' && convertMeasureTo == 'Libra'){
       let result: number;
       result = measureInput / 453.60;
@@ -55,7 +55,7 @@ export class CalculatorService {
       return (result);
     }
 
-    //Medida
+    //Measure
     if(convertMeasureFrom == 'Metro' && convertMeasureTo == 'Polegadas'){
       let result: number;
       result = measureInput * 39.37;
