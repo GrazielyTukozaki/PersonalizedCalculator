@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Measure } from '../models/measure';
-import { CalculatorService } from '../services/calculator-service.service';
+import { CalculatorService } from '../services/calculator.service';
 
 @Component({
   selector: 'app-calculator-page',
