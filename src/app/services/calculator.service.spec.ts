@@ -1,16 +1,15 @@
 import { TestBed } from '@angular/core/testing';
-
 import { CalculatorService } from './calculator.service';
 
-describe('CalculatorServiceService', () => {
+describe('CalculatorService', () => {
   let service: CalculatorService;
 
   beforeEach(() => {
-    TestBed.configureTestingModule({});
+    TestBed.configureTestingModule({ providers: [CalculatorService] });
     service = TestBed.inject(CalculatorService);
   });
 
-  it('should be created', () => {
+  it('can load instance', () => {
     expect(service).toBeTruthy();
   });
 });
