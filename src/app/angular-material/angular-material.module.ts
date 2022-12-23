@@ -30,7 +30,6 @@ import { MatTreeModule } from '@angular/material/tree';
 import { MatBadgeModule } from '@angular/material/badge';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatRadioModule } from '@angular/material/radio';
-import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 
@@ -67,7 +66,6 @@ const materialModules = [
   MatBadgeModule,
   MatGridListModule,
   MatRadioModule,
-  MatDatepickerModule,
   MatTooltipModule,
 ];
 
