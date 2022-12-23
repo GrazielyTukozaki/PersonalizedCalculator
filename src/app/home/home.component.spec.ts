@@ -89,6 +89,16 @@ it('should call route /calculadora', fakeAsync(() => {
   //navigate to route /calculadora
   expect(spy.calls.first().args[0]).toContain('/calculadora');
 
+  component.onConvertMeasure();
+  tick();
+  //navigate to route /calculadora
+  expect(spy.calls.first().args[0]).toContain('/calculadora');
+
+  component.onConvertWeight();
+  tick();
+  //navigate to route /calculadora
+  expect(spy.calls.first().args[0]).toContain('/calculadora');
+
 
 }));
 
@@ -96,15 +106,17 @@ it('should call route params', fakeAsync(() => {
 
   const spyRoute = spyOn(route.snapshot.paramMap, 'get');
   tick();
-  //test router parameters
+  //test router parameters - temperature
   spyRoute.and.returnValue('Celsius');
   expect(component.temperatures[0]).toBe('Celsius');
 
-  spyRoute.and.returnValue('Fahrenheit');
-  expect(component.temperatures[1]).toBe('Fahrenheit');
+  //test router parameters - weight
+  spyRoute.and.returnValue('Grama');
+  expect(component.weights[0]).toBe('Grama');
 
-  spyRoute.and.returnValue('Kelvin');
-  expect(component.temperatures[2]).toBe('Kelvin');
+  //test router parameters - measure
+  spyRoute.and.returnValue('Metro');
+  expect(component.measures[0]).toBe('Metro');
 
 }));
 
