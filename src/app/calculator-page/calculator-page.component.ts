@@ -32,9 +32,9 @@ export class CalculatorPageComponent implements OnInit {
   ngOnChanges() {
 
   }
-  convertedValue(measureInput: Measure){
+  onConvertValue(measureInput: Measure){
     if(measureInput.type == this.result1.type){
-      const answer = this.calculatorService.convertValues(measureInput.value, this.result1.type, this.result2.type);
+      const answer = this.calculatorService.convertValue(measureInput.value, this.result1.type, this.result2.type);
       if (answer != null){
         this.result2 = {
           type:this.result2.type,
@@ -43,7 +43,7 @@ export class CalculatorPageComponent implements OnInit {
       }
     }
     else if (measureInput.type == this.result2.type){
-      const answer = this.calculatorService.convertValues(measureInput.value, this.result2.type, this.result1.type);
+      const answer = this.calculatorService.convertValue(measureInput.value, this.result2.type, this.result1.type);
       if (answer != null){
         this.result1 = {
           type:this.result1.type,
