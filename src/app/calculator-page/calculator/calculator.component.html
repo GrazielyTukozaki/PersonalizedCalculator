@@ -2,10 +2,10 @@
   <h3>A Medida a Ser Convertida: {{measure}}</h3>
   <form [formGroup]="formMeasure">
     <mat-form-field appearance="fill" color="primary">
-        <input matInput formControlName="inputMeasure" [value]="resultConv.value">
+        <input matInput formControlName="inputMeasure" #inputMeasure [value]="resultConv.value">
     </mat-form-field>
     {{measure}}
     <br>
-    <button mat-raised-button color="primary" (click)="onResultConversion(inputValue)">Converter</button>
+    <button mat-raised-button color="primary" (click)="onResultConversion(+inputMeasure.value)">Converter</button>
   </form>
 </div>
