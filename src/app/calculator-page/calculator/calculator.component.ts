@@ -25,10 +25,10 @@ export class CalculatorComponent implements OnInit {
     this.inputValue = this.resultConv.value;
   }
 
-  onResultConversion(measureInput: number){
+  onResultConversion(inputMeasure: number){
     this.resultConv = {
       type: this.measure,
-      value: measureInput
+      value: inputMeasure
     };
     this.resultConvChange.emit(this.resultConv);
   }

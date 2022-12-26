@@ -33,6 +33,7 @@ export class CalculatorPageComponent implements OnInit {
 
   }
   onConvertValue(measureInput: Measure){
+
     if(measureInput.type == this.result1.type){
       const answer = this.calculatorService.convertValue(measureInput.value, this.result1.type, this.result2.type);
       if (answer != null){
