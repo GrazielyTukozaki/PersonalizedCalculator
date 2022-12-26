@@ -89,17 +89,6 @@ it('should call route /calculadora', fakeAsync(() => {
   //navigate to route /calculadora
   expect(spy.calls.first().args[0]).toContain('/calculadora');
 
-  component.onConvertMeasure();
-  tick();
-  //navigate to route /calculadora
-  expect(spy.calls.first().args[0]).toContain('/calculadora');
-
-  component.onConvertWeight();
-  tick();
-  //navigate to route /calculadora
-  expect(spy.calls.first().args[0]).toContain('/calculadora');
-
-
 }));
 
 it('should call route params', fakeAsync(() => {

@@ -7,7 +7,7 @@ export class CalculatorService {
 
   constructor() { }
 
-  convertValues(measureInput: number, convertMeasureFrom: string, convertMeasureTo: string):number|null {
+  convertValue(measureInput: number, convertMeasureFrom: string, convertMeasureTo: string):number|null {
 
     //Temperature
     if(convertMeasureFrom == 'Celsius' && convertMeasureTo == 'Kelvin'){
