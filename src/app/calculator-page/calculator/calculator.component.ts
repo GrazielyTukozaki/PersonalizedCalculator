@@ -8,7 +8,7 @@ import { Measure } from 'src/app/models/measure';
   styleUrls: ['./calculator.component.scss']
 })
 export class CalculatorComponent implements OnInit {
-  measure = "";
+  measure = "Medida Padrão";
   inputValue!:number;
   @Input() resultConv!: Measure;
 
