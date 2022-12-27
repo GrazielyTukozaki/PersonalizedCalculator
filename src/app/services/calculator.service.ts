@@ -34,9 +34,6 @@ export class CalculatorService {
       let result: number;
       result = (measureInput - 32) * 5/9;
       result.toFixed(2);
-      console.log(typeof result);
-      console.log(typeof (result.toFixed(2)));
-
       return (+result.toFixed(2));
     }
     if(convertMeasureFrom == 'Fahrenheit' && convertMeasureTo == 'Kelvin'){
